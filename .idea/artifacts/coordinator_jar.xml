@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="coordinator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/coordinator_jar</output-path>
+    <root id="archive" name="coordinator.jar">
+      <element id="module-output" name="coordinator" />
+      <element id="extracted-dir" path="H:/mylibpath/myJavaLib/lib/javax.servlet-api-4.0.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
