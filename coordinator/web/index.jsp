@@ -37,8 +37,9 @@
       <option value="5">周期同步--每周第x天</option>
       <option value="6">周期同步--每月第x天</option>
       <option value="7">周期同步--时</option>
+      <option value="8">周期同步--每天第x小时</option>
     </select><br/>
-    周期（只对部分同步方式有效）：<input type="text" name="period"/><br>
+    周期/第x天（时）：<input type="text" name="period"/><br>
     <input type="submit"/><br>
   </form>
   </body>

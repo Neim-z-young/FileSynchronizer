@@ -5,8 +5,14 @@ import java.util.Calendar;
 public class WeeklyFileSyncTimerTask extends FileSyncTimerTask {
     private int weekDay;
 
-    public WeeklyFileSyncTimerTask(FileSyncTaskParam param) {
+    public WeeklyFileSyncTimerTask(FileSyncTaskParam param, int weekDay) {
         super(param);
+        if (weekDay < 1) {
+            weekDay = 1;
+        }else if (weekDay > 7) {
+            weekDay = 7;
+        }
+        this.weekDay = weekDay;
     }
 
 

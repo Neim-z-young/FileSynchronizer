@@ -7,11 +7,14 @@ import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.TimerTask;
 import java.util.concurrent.CompletableFuture;
+import java.util.logging.Logger;
 
 /**
  * 同步器定时发送文件同步请求
  */
 public class FileSyncTimerTask extends TimerTask {
+    private Logger logger = Logger.getLogger(FileSyncTimerTask.class.getName());
+
     private String sourceHost;
     private String sourcePort;
     private String sourceFile;
@@ -54,14 +57,20 @@ public class FileSyncTimerTask extends TimerTask {
         sb.append(", sourceFile: ").append(sourceFile);
         sb.append(", targetDirectory").append(targetDirectory);
 
-        HttpRequest request = HttpRequest
-                .newBuilder()
-                .header("Content-Type", "text/html")
-                .version(HttpClient.Version.HTTP_2)
-                .uri(URI.create("http://"+targetHost+":"+targetPort+"/sync"))
-                .timeout(Duration.ofMillis(5000))
-                .POST(HttpRequest.BodyPublishers.ofString(sb.toString()))
-                .build();
-        CompletableFuture<HttpResponse<String>> cf = client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
+        try {
+            HttpRequest request = HttpRequest
+                    .newBuilder()
+                    .header("Content-Type", "text/html")
+                    .version(HttpClient.Version.HTTP_2)
+                    .uri(URI.create("http://"+targetHost+":"+targetPort+"/sync"))
+                    .timeout(Duration.ofMillis(5000))
+                    .POST(HttpRequest.BodyPublishers.ofString(sb.toString()))
+                    .build();
+            CompletableFuture<HttpResponse<String>> cf = client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
+        }catch (IllegalArgumentException e){
+            logger.warning("exception occur :" + e.getMessage());
+            logger.info("canceling task.....");
+            this.cancel();
+        }
     }
 }

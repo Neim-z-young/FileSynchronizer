@@ -41,18 +41,20 @@ public class Coordinator extends HttpServlet {
         String key = timerConfig.buildKey(fSF.toTaskParam());
 
         TimerTask task = timerConfig.buildTaskAndPushToSchedule(fSF);
-        timerConfig.addTimerConfig(key, task);
+        if(task!=null){
+            timerConfig.addTimerConfig(key, task);
+        }
+
         response.setContentType("text/html;charset=UTF-8");
         //   response.setCharacterEncoding("UTF-8");
         request.setCharacterEncoding("UTF-8");   //设置为与服务器同编码（告诉服务器怎样解码）
-        String user=request.getParameter("username");
         java.io.PrintWriter out= response.getWriter();
         // output your page here
         out.println("<html>");
         out.println("<head>");
         out.println("<title>File Sync Servlet</title>");
         out.println("</head>");
-        out.println("<body>");
+        out.println("<body><br/>");
         out.println("Sync task is set: "+key);
         out.println("</body>");
         out.println("</html>");

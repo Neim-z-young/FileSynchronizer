@@ -1,10 +1,8 @@
 package com.oyoungy.util;
 
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Field;
-import java.net.http.HttpRequest;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -23,7 +21,7 @@ public class FileSyncForm {
     private String targetDir;
 
     private String syncType;
-    private String period;
+    private String option;
 
     public String getSourceIp() {
         return sourceIp;
@@ -61,8 +59,8 @@ public class FileSyncForm {
         return syncType;
     }
 
-    public String getPeriod() {
-        return period;
+    public String getOption() {
+        return option;
     }
 
     public void setSourceIp(String sourceIp) {
@@ -101,8 +99,8 @@ public class FileSyncForm {
         this.syncType = syncType;
     }
 
-    public void setPeriod(String period) {
-        this.period = period;
+    public void setOption(String option) {
+        this.option = option;
     }
 
     public FileSyncTaskParam toTaskParam(){
@@ -128,7 +126,7 @@ public class FileSyncForm {
             if(map.containsKey(field.getName())){
                 StringBuilder sb = new StringBuilder();
                 for(String s: map.get(field.getName())){
-                    sb.append(s+"; ");
+                    sb.append(s);
                 }
                 field.setAccessible(true);
                 field.set(fileSyncForm, sb.toString());
