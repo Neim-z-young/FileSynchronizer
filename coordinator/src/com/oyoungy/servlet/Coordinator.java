@@ -1,15 +1,11 @@
-package com.oyoungy.Servlet;
+package com.oyoungy.servlet;
 
 import com.oyoungy.util.FileSyncForm;
 import com.oyoungy.util.SingletonInstance;
 import com.oyoungy.util.TimerConfig;
-import com.sun.net.httpserver.HttpServer;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.util.Map;
 import java.util.TimerTask;
 import java.util.logging.Logger;
 

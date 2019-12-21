@@ -4,15 +4,15 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
   <servlet>
-    <servlet-name>CoordinatorServlet</servlet-name>
-    <servlet-class>com.oyoungy.servlet.Coordinator</servlet-class>
+    <servlet-name>FileSyncerServlet</servlet-name>
+    <servlet-class>com.oyoungy.servlet.FileSyncer</servlet-class>
     <init-param>
       <param-name>debug</param-name>
       <param-value>true</param-value>
     </init-param>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CoordinatorServlet</servlet-name>
+    <servlet-name>FileSyncerServlet</servlet-name>
     <url-pattern>/FileSync</url-pattern>
   </servlet-mapping>
 </web-app>

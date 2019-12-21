@@ -52,17 +52,20 @@ public class FileSyncTimerTask extends TimerTask {
         HttpClient client = SingletonInstance.getHttpClientContext();
 
         StringBuilder sb = new StringBuilder();
-        sb.append("sourceIp: ").append(sourceHost);
-        sb.append(", sourcePort: ").append(sourcePort);
-        sb.append(", sourceFile: ").append(sourceFile);
-        sb.append(", targetDirectory").append(targetDirectory);
+        //TODO 修正硬编码
+        String sep = ": ", sep2 = ", ";
+        sb.append("sourceIp").append(sep).append(sourceHost);
+        sb.append(sep2).append("sourcePort").append(sep).append(sourcePort);
+        sb.append(sep2).append("sourceFile").append(sep).append(sourceFile);
+        sb.append(sep2).append("targetDirectory").append(sep).append(targetDirectory);
+        sb.append(sep2);
 
         try {
             HttpRequest request = HttpRequest
                     .newBuilder()
                     .header("Content-Type", "text/html")
                     .version(HttpClient.Version.HTTP_2)
-                    .uri(URI.create("http://"+targetHost+":"+targetPort+"/sync"))
+                    .uri(URI.create("http://"+targetHost+":"+targetPort+"/fileServer/FileSync"))
                     .timeout(Duration.ofMillis(5000))
                     .POST(HttpRequest.BodyPublishers.ofString(sb.toString()))
                     .build();
