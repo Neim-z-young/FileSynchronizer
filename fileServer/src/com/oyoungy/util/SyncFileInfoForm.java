@@ -8,12 +8,23 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
+/**
+ * 源服务器和目标服务器使用同一个请求参数表单类
+ */
 public class SyncFileInfoForm {
     public static Logger logger = Logger.getLogger(SyncFileInfoForm.class.getName());
+    //目标服务器需使用的参数
     private String sourceIp;
     private String sourcePort;
-    private String sourceFile;
     private String targetDirectory;
+
+    //目标和源服务器共享的参数
+    private String sourceFile;
+
+    //源服务器需使用的参数
+    private String targetIp;
+    private String targetPort;
+
 
     public static SyncFileInfoForm parseHttpRequest(HttpServletRequest request) throws IllegalAccessException {
 
@@ -52,6 +63,7 @@ public class SyncFileInfoForm {
         }
         return form;
     }
+
     public static void main(String[] args) throws IllegalAccessException {
         String rowLine = "sourceIp: dhasjkd, sourcePort: czxcvf, sourceFile: hvoqng, targetDirectory: djjnvpq, ";
         int cur = 0, next;
@@ -111,5 +123,21 @@ public class SyncFileInfoForm {
 
     public void setTargetDirectory(String targetDirectory) {
         this.targetDirectory = targetDirectory;
+    }
+
+    public String getTargetIp() {
+        return targetIp;
+    }
+
+    public void setTargetIp(String targetIp) {
+        this.targetIp = targetIp;
+    }
+
+    public String getTargetPort() {
+        return targetPort;
+    }
+
+    public void setTargetPort(String targetPort) {
+        this.targetPort = targetPort;
     }
 }

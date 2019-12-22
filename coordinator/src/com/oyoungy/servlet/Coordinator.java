@@ -19,6 +19,13 @@ public class Coordinator extends HttpServlet {
 
     }
 
+    /**
+     * 解析并发送文件同步请求
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws java.io.IOException
+     */
     @Override
     public void doPost(HttpServletRequest request,
                       HttpServletResponse response)

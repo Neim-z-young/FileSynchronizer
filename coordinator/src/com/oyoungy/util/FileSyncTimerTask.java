@@ -44,13 +44,7 @@ public class FileSyncTimerTask extends TimerTask {
         return true;
     }
 
-    @Override
-    public void run() {
-        if(!preValidate()){
-            return;
-        }
-        HttpClient client = SingletonInstance.getHttpClientContext();
-
+    protected String buildTargetData(){
         StringBuilder sb = new StringBuilder();
         //TODO 修正硬编码
         String sep = ": ", sep2 = ", ";
@@ -59,20 +53,61 @@ public class FileSyncTimerTask extends TimerTask {
         sb.append(sep2).append("sourceFile").append(sep).append(sourceFile);
         sb.append(sep2).append("targetDirectory").append(sep).append(targetDirectory);
         sb.append(sep2);
+        return sb.toString();
+    }
+
+    protected String buildSourceData(){
+        StringBuilder sb = new StringBuilder();
+        //TODO 修正硬编码
+        String sep = ": ", sep2 = ", ";
+        sb.append("targetIp").append(sep).append(targetHost);
+        sb.append(sep2).append("targetPort").append(sep).append(targetPort);
+        sb.append(sep2).append("sourceFile").append(sep).append(sourceFile);
+        sb.append(sep2);
+        return sb.toString();
+    }
+
+    @Override
+    public void run() {
+        if(!preValidate()){
+            return;
+        }
+        HttpClient client = SingletonInstance.getHttpClientContext();
+
+        String targetData = buildTargetData();
+        String sourceData = buildSourceData();
 
         try {
-            HttpRequest request = HttpRequest
+            //TODO 两个请求到达对应服务器的时间不确定，故目标服务器可能先收到请求，这可能会造成后续的认证出错，故后续出错可从这里入手
+            //文件源服务器请求
+            HttpRequest sourceRequest = HttpRequest
                     .newBuilder()
                     .header("Content-Type", "text/html")
                     .version(HttpClient.Version.HTTP_2)
-                    .uri(URI.create("http://"+targetHost+":"+targetPort+"/fileServer/FileSync"))
+                    .uri(URI.create("http://"+sourceHost+":"+sourcePort+"/fileServer/FileSourceSync"))
                     .timeout(Duration.ofMillis(5000))
-                    .POST(HttpRequest.BodyPublishers.ofString(sb.toString()))
+                    .POST(HttpRequest.BodyPublishers.ofString(sourceData))
                     .build();
-            CompletableFuture<HttpResponse<String>> cf = client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
+            CompletableFuture<HttpResponse<String>> cf2 = client.sendAsync(sourceRequest, HttpResponse.BodyHandlers.ofString());
+
+            //文件目标服务器请求
+            HttpRequest targetRequest = HttpRequest
+                    .newBuilder()
+                    .header("Content-Type", "text/html")
+                    .version(HttpClient.Version.HTTP_2)
+                    .uri(URI.create("http://"+targetHost+":"+targetPort+"/fileServer/FileTargetSync"))
+                    .timeout(Duration.ofMillis(5000))
+                    .POST(HttpRequest.BodyPublishers.ofString(targetData))
+                    .build();
+            CompletableFuture<HttpResponse<String>> cf = client.sendAsync(targetRequest, HttpResponse.BodyHandlers.ofString());
+
         }catch (IllegalArgumentException e){
-            logger.warning("exception occur :" + e.getMessage());
-            logger.info("canceling task.....");
+            logger.warning("IllegalArgument exception occurred :" + e.getMessage());
+            logger.warning("canceling task.....");
+            this.cancel();
+        }catch (Exception e){
+            logger.warning("Other exception occurred :" + e.getMessage());
+            logger.warning("canceling task.....");
             this.cancel();
         }
     }

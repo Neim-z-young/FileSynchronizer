@@ -53,6 +53,7 @@ public class TimerConfig {
 
     public void addTimerConfig(String key, TimerTask task){
         if(timerTasks.containsKey(key) && !timerTasks.get(key).equals(task)){
+            logger.info("Canceling existed task");
             timerTasks.get(key).cancel();
         }
         timerTasks.put(key, task);
