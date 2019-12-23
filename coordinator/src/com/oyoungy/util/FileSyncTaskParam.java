@@ -6,15 +6,15 @@ public class FileSyncTaskParam {
     private String sourceFile;
     private String targetIp;
     private String targetPort;
-    private String targetDirectory;
+    private String targetFile;
 
-    public FileSyncTaskParam(String sourceIp, String sourcePort, String sourceFile, String targetIp, String targetPort, String targetDirectory) {
+    public FileSyncTaskParam(String sourceIp, String sourcePort, String sourceFile, String targetIp, String targetPort, String targetFile) {
         this.sourceIp = sourceIp;
         this.sourcePort = sourcePort;
         this.sourceFile = sourceFile;
         this.targetIp = targetIp;
         this.targetPort = targetPort;
-        this.targetDirectory = targetDirectory;
+        this.targetFile = targetFile;
     }
 
     public String getSourceIp() {
@@ -37,7 +37,7 @@ public class FileSyncTaskParam {
         return targetPort;
     }
 
-    public String getTargetDirectory() {
-        return targetDirectory;
+    public String getTargetFile() {
+        return targetFile;
     }
 }

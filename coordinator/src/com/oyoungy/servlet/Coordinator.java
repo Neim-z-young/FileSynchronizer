@@ -32,6 +32,7 @@ public class Coordinator extends HttpServlet {
             throws ServletException, java.io.IOException {
 
         FileSyncForm fSF = null;
+        //TODO 验证文件路径的合法性
         try {
             fSF = FileSyncForm.parseHttpRequest(request);
         } catch (IllegalAccessException e) {
@@ -58,7 +59,8 @@ public class Coordinator extends HttpServlet {
         out.println("<title>File Sync Servlet</title>");
         out.println("</head>");
         out.println("<body><br/>");
-        out.println("Sync task is set: "+key);
+        out.println("Sync task is: "+task+"<br/>");
+        out.println("Sync key is: "+key);
         out.println("</body>");
         out.println("</html>");
         out.close();

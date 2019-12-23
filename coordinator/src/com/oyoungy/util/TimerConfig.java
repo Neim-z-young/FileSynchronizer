@@ -41,12 +41,12 @@ public class TimerConfig {
 
     public String buildKey(FileSyncTaskParam param){
         return buildKey(param.getSourceIp(), param.getSourcePort(), param.getSourceFile(),
-                param.getTargetIp(), param.getTargetPort(), param.getTargetDirectory());
+                param.getTargetIp(), param.getTargetPort(), param.getTargetFile());
     }
 
     public String buildKey(String sourceHost, String sourcePort, String sourceFile,
-                           String targetHost, String targetPort, String targetDirectory){
-        String key = sourceHost+":"+sourcePort+";"+sourceFile+";"+targetHost+":"+targetPort+";"+targetDirectory;
+                           String targetHost, String targetPort, String targetFile){
+        String key = sourceHost+":"+sourcePort+";"+sourceFile+";"+targetHost+":"+targetPort+";"+targetFile;
         logger.info("KEY is: " + key);
         return key;
     }

@@ -21,7 +21,7 @@
     路径：<input type="text" name="sourcePath"/><br>
 
     <br/>目标文件属性：<br/>
-    数据资源名(目标文件目录): <input type="text" name="targetDir"/><br>
+    数据资源名: <input type="text" name="targetDir"/><br>
     数据资源类型：文件<br/>
     数据资源所属IP：<input type="text" name="targetIp"/><br>
     端口号：<input type="text" name="targetPort"/><br>

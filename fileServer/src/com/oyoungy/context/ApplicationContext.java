@@ -2,7 +2,6 @@ package com.oyoungy.context;
 
 import com.oyoungy.util.SyncFileInfoForm;
 
-import java.lang.annotation.Target;
 import java.net.http.HttpClient;
 import java.time.Duration;
 import java.util.HashMap;
@@ -48,6 +47,6 @@ public class ApplicationContext {
     public static String buildSourceServerKey(SyncFileInfoForm sFIF){
         if(sFIF.getSourceIp()==null) return null;
 
-        return sFIF.getSourceIp()+":"+sFIF.getSourcePort()+";"+sFIF.getSourceFile()+";"+sFIF.getTargetDirectory();
+        return sFIF.getSourceIp()+":"+sFIF.getSourcePort()+";"+sFIF.getSourceFile()+";"+sFIF.getTargetFile();
     }
 }

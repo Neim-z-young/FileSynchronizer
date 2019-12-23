@@ -18,7 +18,7 @@ public class FileSyncForm {
     private String targetIp;
     private String targetPort;
     private String targetPath;
-    private String targetDir;
+    private String targetFile;
 
     private String syncType;
     private String option;
@@ -43,8 +43,8 @@ public class FileSyncForm {
         return targetPort;
     }
 
-    public String getTargetDir() {
-        return targetDir;
+    public String getTargetFile() {
+        return targetFile;
     }
 
     public String getSourcePath() {
@@ -91,8 +91,8 @@ public class FileSyncForm {
         this.targetPath = targetPath;
     }
 
-    public void setTargetDir(String targetDir) {
-        this.targetDir = targetDir;
+    public void setTargetFile(String targetFile) {
+        this.targetFile = targetFile;
     }
 
     public void setSyncType(String syncType) {
@@ -110,7 +110,7 @@ public class FileSyncForm {
                 sourcePath+"\\"+sourceFile,
                 targetIp,
                 targetPort,
-                targetPath+"\\"+targetDir
+                targetPath+"\\"+ targetFile
         );
     }
 

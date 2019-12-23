@@ -16,7 +16,7 @@ public class SyncFileInfoForm {
     //目标服务器需使用的参数
     private String sourceIp;
     private String sourcePort;
-    private String targetDirectory;
+    private String targetFile;
 
     //目标和源服务器共享的参数
     private String sourceFile;
@@ -65,7 +65,7 @@ public class SyncFileInfoForm {
     }
 
     public static void main(String[] args) throws IllegalAccessException {
-        String rowLine = "sourceIp: dhasjkd, sourcePort: czxcvf, sourceFile: hvoqng, targetDirectory: djjnvpq, ";
+        String rowLine = "sourceIp: dhasjkd, sourcePort: czxcvf, sourceFile: hvoqng, targetFile: djjnvpq, ";
         int cur = 0, next;
         //TODO 修正硬编码
         String sep = ": ", sep2 = ", ";
@@ -117,12 +117,12 @@ public class SyncFileInfoForm {
         this.sourceFile = sourceFile;
     }
 
-    public String getTargetDirectory() {
-        return targetDirectory;
+    public String getTargetFile() {
+        return targetFile;
     }
 
-    public void setTargetDirectory(String targetDirectory) {
-        this.targetDirectory = targetDirectory;
+    public void setTargetFile(String targetFile) {
+        this.targetFile = targetFile;
     }
 
     public String getTargetIp() {

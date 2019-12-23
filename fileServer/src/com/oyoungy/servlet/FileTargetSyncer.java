@@ -43,6 +43,7 @@ public class FileTargetSyncer extends HttpServlet {
             e.printStackTrace();
         }
         if(sFIF!=null && sFIF.getSourceIp()!=null){
+            logger.info("begin to execute file sync");
             ApplicationContext context = SingletonInstance.getAppContext();
             String sourceKey = ApplicationContext.buildSourceServerKey(sFIF);
             context.getSourceServers().put(sourceKey, "");

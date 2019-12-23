@@ -20,24 +20,24 @@ public class FileSyncTimerTask extends TimerTask {
     private String sourceFile;
     private String targetHost;
     private String targetPort;
-    private String targetDirectory;
+    private String targetFile;
 
     private String syncType;
     private String period;
 
     public FileSyncTimerTask(FileSyncTaskParam param){
         this(param.getSourceIp(), param.getSourcePort(), param.getSourceFile(),
-                param.getTargetIp(), param.getTargetPort(), param.getTargetDirectory());
+                param.getTargetIp(), param.getTargetPort(), param.getTargetFile());
     }
 
     public FileSyncTimerTask(String sourceHost, String sourcePort, String sourceFile,
-                             String targetHost, String targetPort, String targetDirectory){
+                             String targetHost, String targetPort, String targetFile){
         this.sourceHost = sourceHost;
         this.sourcePort = sourcePort;
         this.sourceFile = sourceFile;
         this.targetHost = targetHost;
         this.targetPort = targetPort;
-        this.targetDirectory = targetDirectory;
+        this.targetFile = targetFile;
     }
 
     protected boolean preValidate(){
@@ -51,7 +51,7 @@ public class FileSyncTimerTask extends TimerTask {
         sb.append("sourceIp").append(sep).append(sourceHost);
         sb.append(sep2).append("sourcePort").append(sep).append(sourcePort);
         sb.append(sep2).append("sourceFile").append(sep).append(sourceFile);
-        sb.append(sep2).append("targetDirectory").append(sep).append(targetDirectory);
+        sb.append(sep2).append("targetFile").append(sep).append(targetFile);
         sb.append(sep2);
         return sb.toString();
     }
