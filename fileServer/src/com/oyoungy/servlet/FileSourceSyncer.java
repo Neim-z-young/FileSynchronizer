@@ -38,13 +38,16 @@ public class FileSourceSyncer extends HttpServlet {
     private String validatePeerServer(HttpServletRequest request){
         String fullPath = "";
         try {
+            request.setCharacterEncoding("utf-8");
             BufferedReader reader = request.getReader();
+            String targetPort = reader.readLine();
             fullPath = reader.readLine();
             SyncFileInfoForm sFIF = new SyncFileInfoForm();
             sFIF.setTargetIp(request.getRemoteAddr());
-            sFIF.setTargetPort(String.valueOf(request.getRemotePort()));
+            sFIF.setTargetPort(targetPort);
             sFIF.setSourceFile(fullPath);
             String key = ApplicationContext.buildTargetServerKey(sFIF);
+            logger.info("lookup target server key: " + key);
             if(!SingletonInstance.getAppContext().getTargetServers().containsKey(key)){
                 fullPath = "";
             }
@@ -82,7 +85,7 @@ public class FileSourceSyncer extends HttpServlet {
             wrong = true;
         }
         if(wrong){
-            logger.warning(errmsg);
+            logger.warning("源文件： " + fullPath + "  "  + errmsg);
             try {
                 response.sendError(404, errmsg);
             } catch (IOException e) {
@@ -122,6 +125,7 @@ public class FileSourceSyncer extends HttpServlet {
             logger.info("source file sync success");
         }catch(Exception e){
             e.printStackTrace();
+            logger.warning("source file sunc failed!!!");
             logger.warning("exception occurred: " + e.getMessage());
             response.setStatus(404);
         }finally {
@@ -163,6 +167,7 @@ public class FileSourceSyncer extends HttpServlet {
         if(sFIF!=null && sFIF.getTargetIp()!=null){
             ApplicationContext context = SingletonInstance.getAppContext();
             String targetKey = ApplicationContext.buildTargetServerKey(sFIF);
+            logger.info("build target server key: "+targetKey);
             context.getTargetServers().put(targetKey, "");
         }
     }

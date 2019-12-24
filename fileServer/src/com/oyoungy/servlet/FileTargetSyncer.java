@@ -38,6 +38,7 @@ public class FileTargetSyncer extends HttpServlet {
         SyncFileInfoForm sFIF = null;
         try {
             sFIF = SyncFileInfoForm.parseHttpRequest(request);
+            sFIF.setTargetPort(String.valueOf(request.getLocalPort()));
         } catch (IllegalAccessException e) {
             logger.warning("wrong request body");
             e.printStackTrace();

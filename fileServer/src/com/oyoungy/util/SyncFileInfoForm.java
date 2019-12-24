@@ -3,7 +3,9 @@ package com.oyoungy.util;
 import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -26,8 +28,9 @@ public class SyncFileInfoForm {
     private String targetPort;
 
 
-    public static SyncFileInfoForm parseHttpRequest(HttpServletRequest request) throws IllegalAccessException {
+    public static SyncFileInfoForm parseHttpRequest(HttpServletRequest request) throws IllegalAccessException, UnsupportedEncodingException {
 
+        request.setCharacterEncoding("utf-8");
         String rowLine = "";
         try {
             BufferedReader reader = request.getReader();
@@ -54,7 +57,7 @@ public class SyncFileInfoForm {
         Field[] fields = SyncFileInfoForm.class.getDeclaredFields();
         for(Field field : fields){
             logger.info("field: " + field.getName());
-            if(map.containsKey(field.getName())){
+            if(Modifier.isPrivate(field.getModifiers()) && map.containsKey(field.getName())){
                 String s = map.get(field.getName());
                 logger.info("param: " + s);
                 field.setAccessible(true);

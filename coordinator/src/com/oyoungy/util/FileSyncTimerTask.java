@@ -82,7 +82,7 @@ public class FileSyncTimerTask extends TimerTask {
             //文件源服务器请求
             HttpRequest sourceRequest = HttpRequest
                     .newBuilder()
-                    .header("Content-Type", "text/html")
+                    .header("Content-Type", "text/plain")
                     .version(HttpClient.Version.HTTP_2)
                     .uri(URI.create("http://"+sourceHost+":"+sourcePort+"/fileServer/FileSourceSync"))
                     .timeout(Duration.ofMillis(5000))
@@ -93,7 +93,7 @@ public class FileSyncTimerTask extends TimerTask {
             //文件目标服务器请求
             HttpRequest targetRequest = HttpRequest
                     .newBuilder()
-                    .header("Content-Type", "text/html")
+                    .header("Content-Type", "text/plain")
                     .version(HttpClient.Version.HTTP_2)
                     .uri(URI.create("http://"+targetHost+":"+targetPort+"/fileServer/FileTargetSync"))
                     .timeout(Duration.ofMillis(5000))

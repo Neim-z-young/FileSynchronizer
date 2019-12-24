@@ -2,7 +2,9 @@ package com.oyoungy.util;
 
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -114,7 +116,8 @@ public class FileSyncForm {
         );
     }
 
-    public static FileSyncForm parseHttpRequest(HttpServletRequest request) throws IllegalAccessException {
+    public static FileSyncForm parseHttpRequest(HttpServletRequest request) throws IllegalAccessException, UnsupportedEncodingException {
+        request.setCharacterEncoding("utf-8");
         Map<String, String[]> map = request.getParameterMap();
         Set<String> keys = map.keySet();
         for( String string : keys){
@@ -123,7 +126,7 @@ public class FileSyncForm {
         FileSyncForm fileSyncForm = new FileSyncForm();
         Field[] fields = FileSyncForm.class.getDeclaredFields();
         for(Field field:fields){
-            if(map.containsKey(field.getName())){
+            if(Modifier.isPrivate(field.getModifiers()) && map.containsKey(field.getName())){
                 StringBuilder sb = new StringBuilder();
                 for(String s: map.get(field.getName())){
                     sb.append(s);
