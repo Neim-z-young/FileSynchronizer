@@ -7,14 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93933044-2c48-4c4f-8df0-6b5f90cd7604" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncTimerTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncTimerTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coordinator/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/coordinator/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/SingletonInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/SingletonInstance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fileServer/src/com/oyoungy/servlet/FileSourceSyncer.java" beforeDir="false" afterPath="$PROJECT_DIR$/fileServer/src/com/oyoungy/servlet/FileSourceSyncer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fileServer/src/com/oyoungy/servlet/FileTargetSyncer.java" beforeDir="false" afterPath="$PROJECT_DIR$/fileServer/src/com/oyoungy/servlet/FileTargetSyncer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fileServer/src/com/oyoungy/util/HttpFileSyncer.java" beforeDir="false" afterPath="$PROJECT_DIR$/fileServer/src/com/oyoungy/util/HttpFileSyncer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fileServer/src/com/oyoungy/util/SyncFileInfoForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/fileServer/src/com/oyoungy/util/SyncFileInfoForm.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fileServer/src/com/oyoungy/util/HttpFileSyncer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1606">
-              <caret line="73" column="28" lean-forward="true" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+            <state relative-caret-position="946">
+              <caret line="43" column="81" lean-forward="true" selection-start-line="43" selection-start-column="81" selection-end-line="43" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,46 +42,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fileServer/src/com/oyoungy/servlet/FileTargetSyncer.java">
+        <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncTaskParam.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fileServer/src/com/oyoungy/util/SyncFileInfoForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="119" column="34" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/util/TimerConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="88" column="34" lean-forward="true" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="176">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -91,25 +53,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncTimerTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="95" column="51" lean-forward="true" selection-start-line="95" selection-start-column="51" selection-end-line="95" selection-end-column="51" />
+            <state relative-caret-position="158">
+              <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://H:/mylibpath/java-source-code/src/java.net.http/java/net/http/HttpRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="552" column="37" selection-start-line="552" selection-start-column="37" selection-end-line="552" selection-end-column="37" />
-              <folding>
-                <element signature="e#11777#11778#0" expanded="true" />
-                <element signature="e#11828#11829#0" expanded="true" />
-                <element signature="e#21918#21919#0" expanded="true" />
-                <element signature="e#21970#21971#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fileServer/src/com/oyoungy/servlet/FileSourceSyncer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="161" column="62" lean-forward="true" selection-start-line="161" selection-start-column="62" selection-end-line="161" selection-end-column="62" />
+            <state relative-caret-position="584">
+              <caret line="170" column="55" selection-start-line="170" selection-start-column="55" selection-end-line="170" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,10 +75,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://H:/mylibpath/myJavaLib/src/javax.servlet-api-4.0.0-sources.jar!/javax/servlet/ServletRequest.java">
+        <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/servlet/Coordinator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="144" column="16" selection-start-line="144" selection-start-column="16" selection-end-line="144" selection-end-column="16" />
+            <state relative-caret-position="432">
+              <caret line="53" column="54" lean-forward="true" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/util/SingletonInstance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+              <folding>
+                <element signature="e#1051#1052#0" expanded="true" />
+                <element signature="e#1097#1098#0" expanded="true" />
+                <element signature="e#1167#1168#0" expanded="true" />
+                <element signature="e#1213#1214#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,7 +118,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/Config.java" />
-        <option value="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/SingletonInstance.java" />
         <option value="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyneForm.java" />
         <option value="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/TimeHelper.java" />
         <option value="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/WeeklyFileSyncTimerTask.java" />
@@ -165,19 +129,20 @@
         <option value="$PROJECT_DIR$/fileServer/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/fileServer/src/com/oyoungy/context/SingletonContext.java" />
         <option value="$PROJECT_DIR$/fileServer/src/com/oyoungy/context/ApplicationContext.java" />
-        <option value="$PROJECT_DIR$/fileServer/src/com/oyoungy/context/SingletonInstance.java" />
         <option value="$PROJECT_DIR$/fileServer/src/com/oyoungy/util/FileSyncTask.java" />
         <option value="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncTaskParam.java" />
         <option value="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/TimerConfig.java" />
         <option value="$PROJECT_DIR$/coordinator/src/com/oyoungy/servlet/Coordinator.java" />
         <option value="$PROJECT_DIR$/coordinator/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/coordinator/web/index.jsp" />
-        <option value="$PROJECT_DIR$/fileServer/src/com/oyoungy/servlet/FileSourceSyncer.java" />
         <option value="$PROJECT_DIR$/fileServer/src/com/oyoungy/servlet/FileTargetSyncer.java" />
-        <option value="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncForm.java" />
-        <option value="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncTimerTask.java" />
         <option value="$PROJECT_DIR$/fileServer/src/com/oyoungy/util/SyncFileInfoForm.java" />
         <option value="$PROJECT_DIR$/fileServer/src/com/oyoungy/util/HttpFileSyncer.java" />
+        <option value="$PROJECT_DIR$/fileServer/src/com/oyoungy/servlet/FileSourceSyncer.java" />
+        <option value="$PROJECT_DIR$/fileServer/src/com/oyoungy/context/SingletonInstance.java" />
+        <option value="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncTimerTask.java" />
+        <option value="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncForm.java" />
+        <option value="$PROJECT_DIR$/coordinator/src/com/oyoungy/util/SingletonInstance.java" />
       </list>
     </option>
   </component>
@@ -206,6 +171,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,6 +251,14 @@
               <item name="fileServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="oyoungy" type="462c0819:PsiDirectoryNode" />
+              <item name="context" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fileSync" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fileSync" type="462c0819:PsiDirectoryNode" />
+              <item name="fileServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="oyoungy" type="462c0819:PsiDirectoryNode" />
               <item name="servlet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -302,15 +277,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="F:/此电脑/文档/INTELIDEA/BioChatnogradle" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
@@ -384,8 +357,8 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.58439493" visible="true" weight="0.24200426" />
-      <window_info id="Structure" order="1" sideWeight="0.4156051" side_tool="true" visible="true" weight="0.24200426" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7104701" visible="true" weight="0.24466951" />
+      <window_info id="Structure" order="1" sideWeight="0.28952992" side_tool="true" visible="true" weight="0.24466951" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.616453" side_tool="true" weight="0.25" />
@@ -395,7 +368,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32905984" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32905984" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -445,13 +418,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://H:/mylibpath/java-source-code/src/java.base/java/nio/file/attribute/FileAttributeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://H:/mylibpath/java-source-code/src/java.base/java/io/Closeable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -502,13 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://H:/mylibpath/myJavaLib/src/javax.servlet-api-4.0.0-sources.jar!/javax/servlet/http/HttpServletResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="373" column="16" selection-start-line="373" selection-start-column="16" selection-end-line="373" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://H:/mylibpath/java-source-code/src/java.net.http/jdk/internal/net/http/HttpResponseImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -526,20 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-98">
           <caret line="161" column="28" selection-start-line="161" selection-start-column="28" selection-end-line="161" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://H:/mylibpath/java-source-code/src/java.net.http/jdk/internal/net/http/HttpClientImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="624" column="30" selection-start-line="624" selection-start-column="30" selection-end-line="624" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://H:/mylibpath/java-source-code/src/java.net.http/java/net/http/HttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="538" selection-start-line="538" selection-end-line="538" />
         </state>
       </provider>
     </entry>
@@ -610,16 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fileServer/src/com/oyoungy/context/SingletonInstance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="96" selection-start-line="15" selection-start-column="96" selection-end-line="15" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://H:/mylibpath/java-source-code/src/java.base/java/nio/file/Files.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -655,13 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncTaskParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -711,13 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://H:/mylibpath/myJavaLib/src/javax.servlet-api-4.0.0-sources.jar!/javax/servlet/ServletRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="144" column="16" selection-start-line="144" selection-start-column="16" selection-end-line="144" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://H:/mylibpath/java-source-code/src/java.net.http/java/net/http/HttpResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -753,27 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/servlet/Coordinator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="53" column="54" lean-forward="true" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fileServer/src/com/oyoungy/util/FileSyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
-          <folding>
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/coordinator/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -781,37 +681,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fileServer/src/com/oyoungy/servlet/FileTargetSyncer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="119" column="34" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/util/TimerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="88" column="34" lean-forward="true" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://H:/mylibpath/java-source-code/src/java.base/java/nio/charset/StandardCharsets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://H:/mylibpath/myJavaLib/src/javax.servlet-api-4.0.0-sources.jar!/javax/servlet/ServletRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1914">
+          <caret line="144" column="16" selection-start-line="144" selection-start-column="16" selection-end-line="144" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://H:/mylibpath/myJavaLib/src/javax.servlet-api-4.0.0-sources.jar!/javax/servlet/http/HttpServletResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="184" column="68" lean-forward="true" selection-start-line="184" selection-start-column="68" selection-end-line="184" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fileServer/src/com/oyoungy/context/SingletonInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -828,20 +725,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncTimerTask.java">
+    <entry file="file://H:/mylibpath/java-source-code/src/java.net.http/jdk/internal/net/http/HttpClientImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="95" column="51" lean-forward="true" selection-start-line="95" selection-start-column="51" selection-end-line="95" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-700">
+          <caret line="589" column="32" lean-forward="true" selection-start-line="589" selection-start-column="32" selection-end-line="589" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fileServer/src/com/oyoungy/servlet/FileSourceSyncer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="161" column="62" lean-forward="true" selection-start-line="161" selection-start-column="62" selection-end-line="161" selection-end-column="62" />
+        <state relative-caret-position="584">
+          <caret line="170" column="55" selection-start-line="170" selection-start-column="55" selection-end-line="170" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -850,8 +744,93 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fileServer/src/com/oyoungy/util/SyncFileInfoForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+        <state relative-caret-position="462">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://H:/mylibpath/java-source-code/src/java.net.http/java/net/http/HttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="555" column="58" lean-forward="true" selection-start-line="555" selection-start-column="58" selection-end-line="555" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fileServer/src/com/oyoungy/util/FileSyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
+          <folding>
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncTaskParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncTimerTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/util/FileSyncForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/servlet/Coordinator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="53" column="54" lean-forward="true" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/util/SingletonInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding>
+            <element signature="e#1051#1052#0" expanded="true" />
+            <element signature="e#1097#1098#0" expanded="true" />
+            <element signature="e#1167#1168#0" expanded="true" />
+            <element signature="e#1213#1214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coordinator/src/com/oyoungy/util/TimerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fileServer/src/com/oyoungy/servlet/FileTargetSyncer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1078">
+          <caret line="49" column="58" lean-forward="true" selection-start-line="49" selection-start-column="58" selection-end-line="49" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -860,8 +839,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fileServer/src/com/oyoungy/util/HttpFileSyncer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1606">
-          <caret line="73" column="28" lean-forward="true" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+        <state relative-caret-position="946">
+          <caret line="43" column="81" lean-forward="true" selection-start-line="43" selection-start-column="81" selection-end-line="43" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -879,7 +858,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -928,7 +906,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

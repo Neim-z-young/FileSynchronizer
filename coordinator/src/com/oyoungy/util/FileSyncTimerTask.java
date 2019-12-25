@@ -15,10 +15,10 @@ import java.util.logging.Logger;
 public class FileSyncTimerTask extends TimerTask {
     private Logger logger = Logger.getLogger(FileSyncTimerTask.class.getName());
 
-    private String sourceHost;
+    private String sourceIp;
     private String sourcePort;
     private String sourceFile;
-    private String targetHost;
+    private String targetIp;
     private String targetPort;
     private String targetFile;
 
@@ -30,12 +30,12 @@ public class FileSyncTimerTask extends TimerTask {
                 param.getTargetIp(), param.getTargetPort(), param.getTargetFile());
     }
 
-    public FileSyncTimerTask(String sourceHost, String sourcePort, String sourceFile,
-                             String targetHost, String targetPort, String targetFile){
-        this.sourceHost = sourceHost;
+    public FileSyncTimerTask(String sourceIp, String sourcePort, String sourceFile,
+                             String targetIp, String targetPort, String targetFile){
+        this.sourceIp = sourceIp;
         this.sourcePort = sourcePort;
         this.sourceFile = sourceFile;
-        this.targetHost = targetHost;
+        this.targetIp = targetIp;
         this.targetPort = targetPort;
         this.targetFile = targetFile;
     }
@@ -48,7 +48,7 @@ public class FileSyncTimerTask extends TimerTask {
         StringBuilder sb = new StringBuilder();
         //TODO 修正硬编码
         String sep = ": ", sep2 = ", ";
-        sb.append("sourceIp").append(sep).append(sourceHost);
+        sb.append("sourceIp").append(sep).append(sourceIp);
         sb.append(sep2).append("sourcePort").append(sep).append(sourcePort);
         sb.append(sep2).append("sourceFile").append(sep).append(sourceFile);
         sb.append(sep2).append("targetFile").append(sep).append(targetFile);
@@ -60,7 +60,7 @@ public class FileSyncTimerTask extends TimerTask {
         StringBuilder sb = new StringBuilder();
         //TODO 修正硬编码
         String sep = ": ", sep2 = ", ";
-        sb.append("targetIp").append(sep).append(targetHost);
+        sb.append("targetIp").append(sep).append(targetIp);
         sb.append(sep2).append("targetPort").append(sep).append(targetPort);
         sb.append(sep2).append("sourceFile").append(sep).append(sourceFile);
         sb.append(sep2);
@@ -80,22 +80,24 @@ public class FileSyncTimerTask extends TimerTask {
         try {
             //TODO 两个请求到达对应服务器的时间不确定，故目标服务器可能先收到请求，这可能会造成后续的认证出错，故后续出错可从这里入手
             //文件源服务器请求
+            logger.info("request to source server: " + sourceIp + " : " + sourceData);
             HttpRequest sourceRequest = HttpRequest
                     .newBuilder()
                     .header("Content-Type", "text/plain")
                     .version(HttpClient.Version.HTTP_2)
-                    .uri(URI.create("http://"+sourceHost+":"+sourcePort+"/fileServer/FileSourceSync"))
+                    .uri(URI.create("http://"+ sourceIp +":"+sourcePort+"/fileServer/FileSourceSync"))
                     .timeout(Duration.ofMillis(5000))
                     .POST(HttpRequest.BodyPublishers.ofString(sourceData))
                     .build();
             CompletableFuture<HttpResponse<String>> cf2 = client.sendAsync(sourceRequest, HttpResponse.BodyHandlers.ofString());
 
             //文件目标服务器请求
+            logger.info("request to target server: " + targetIp + " : " + targetData);
             HttpRequest targetRequest = HttpRequest
                     .newBuilder()
                     .header("Content-Type", "text/plain")
                     .version(HttpClient.Version.HTTP_2)
-                    .uri(URI.create("http://"+targetHost+":"+targetPort+"/fileServer/FileTargetSync"))
+                    .uri(URI.create("http://"+ targetIp +":"+targetPort+"/fileServer/FileTargetSync"))
                     .timeout(Duration.ofMillis(5000))
                     .POST(HttpRequest.BodyPublishers.ofString(targetData))
                     .build();

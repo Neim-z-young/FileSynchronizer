@@ -30,7 +30,9 @@ public class FileSourceSyncer extends HttpServlet {
             throws ServletException, java.io.IOException {
         String fullPath;
         if((fullPath = validatePeerServer(request)).equals("")){
+            logger.warning("请求无效");
             response.sendError(404, "请求无效");
+            return;
         }
         processFileSync(request, response, fullPath);
     }

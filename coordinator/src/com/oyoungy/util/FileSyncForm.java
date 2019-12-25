@@ -5,6 +5,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -106,13 +108,18 @@ public class FileSyncForm {
     }
 
     public FileSyncTaskParam toTaskParam(){
+        Path source = Paths.get(sourcePath);
+        source = source.resolve(sourceFile);
+        Path target = Paths.get(targetPath);
+        target = target.resolve(targetFile);
+
         return new FileSyncTaskParam(
                 sourceIp,
                 sourcePort,
-                sourcePath+"\\"+sourceFile,
+                source.toString(),
                 targetIp,
                 targetPort,
-                targetPath+"\\"+ targetFile
+                target.toString()
         );
     }
 
